@@ -1,0 +1,16 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      proKey:
+        type: string
+        description: Pro tier API key for unlimited usage
+        default: ""
+    required: []
+  commandFunction:
+    args:
+      - -c
+      - "exec python -c \"import os, sys; key = os.environ.get('PROL_AGENTPAY_DEMO', ''); sys.argv = ['slatemint', '--pro-key', key]; exec(open('/app/server.py').read())\""
+    env:
+      PROL_AGENTPAY_DEMO: ${config.proKey}

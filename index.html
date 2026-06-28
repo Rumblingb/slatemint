@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SlateMint — Text Markup & Conversion MCP Server</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0c10;
+    --panel: #14161d;
+    --ink: #e6e6e6;
+    --muted: #94a3b8;
+    --accent: #f59e0b;
+    --accent-2: #ef4444;
+    --line: #2a2f3a;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #0b0c10, #181a22);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  }
+  header, section { max-width: 980px; margin: 0 auto; padding: 48px 24px 24px; }
+  .badge {
+    display: inline-block;
+    border: 1px solid #252a34;
+    background: #11141a;
+    color: #d4d4d4;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  h1 { margin: 14px 0 8px; font-size: clamp(36px, 3.4vw, 52px); line-height: 1.05; }
+  .gradient {
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  p.lead { color: #cbd5e1; max-width: 72ch; font-size: 17px; }
+  .cta {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    border: 0; padding: 12px 16px; border-radius: 12px; font-weight: 700; cursor: pointer; text-decoration: none;
+    color: #fff;
+  }
+  .btn-primary { background: #f59e0b; color: #0f1115; }
+  .btn-secondary { background: #181c25; border: 1px solid #2c323d; color: #f3f4f6; }
+  .tools { margin-top: 32px; }
+  .grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .card {
+    background: #0f1218;
+    border: 1px solid #1e222a;
+    border-radius: 16px;
+    padding: 18px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 16px; color: #f59e0b; }
+  .card p, .card li { color: #bfc7cf; font-size: 14px; }
+  .card code {
+    background: #11131a; border: 1px solid #1f232c; padding: 2px 6px; border-radius: 8px;
+    font-size: 12px; color: #f3f4f6;
+  }
+  .pricing { margin-top: 36px; }
+  .price {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .tier {
+    background: #0d1018; border: 1px solid #1d222a; border-radius: 16px; padding: 18px;
+  }
+  .tier.highlight { border-color: #2f3a29; background: #13100c; }
+  .tier h3 { margin: 0 0 6px; font-size: 17px; }
+  .price-amount {
+    font-size: 28px; color: #f59e0b;
+  }
+  footer { color: #6b7280; font-size: 13px; padding: 30px 24px 60px; }
+</style>
+</head>
+<body>
+<header>
+  <span class="badge">MCP Server</span>
+  <h1>SlateMint <span class="gradient">Text Markup</span> Conversions</h1>
+  <p class="lead">Fast, predictable text conversions between Plain Text, Markdown, HTML, and JSON — built as an MCP server for coding agents and workflows.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#pricing">Get started</a>
+    <a class="btn btn-secondary" href="#tools">View tools</a>
+  </div>
+</header>
+
+<section id="tools" class="tools">
+  <h2>Tools</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>convert_text_markup</h3>
+      <p>Convert text between plain text, Markdown, HTML, and JSON.</p>
+      <p><code>source_format + target_format</code></p>
+    </div>
+    <div class="card">
+      <h3>markdown_to_html</h3>
+      <p>Turn lightweight Markdown into clean HTML with heading, list, and paragraph support.</p>
+    </div>
+    <div class="card">
+      <h3>json_to_markdown</h3>
+      <p>Render JSON objects or arrays as readable Markdown sections.</p>
+    </div>
+    <div class="card">
+      <h3>normalize_whitespace</h3>
+      <p>Trim, collapse runs of whitespace, and preserve optional line breaks.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <h2>Pricing</h2>
+  <div class="price">
+    <div class="tier">
+      <h3>Free</h3>
+      <div class="price-amount">$0</div>
+      <p>50 conversions per minute.</p>
+    </div>
+    <div class="tier highlight">
+      <h3>Pro</h3>
+      <div class="price-amount">$7/mo</div>
+      <p>Unlimited conversions and higher throughput.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built by AgentPay Labs
+</footer>
+</body>
+</html>

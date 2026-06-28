@@ -1,0 +1,14 @@
+{
+  "name": "slatemint",
+  "slug": "slatemint",
+  "description": "Convert text between plain text, Markdown, HTML, and JSON with normalization utilities.",
+  "category": "text",
+  "primaryLanguage": "python",
+  "pricing": "paid",
+  "monthlyPrice": 7,
+  "links": {
+    "github": "https://github.com/Rumblingb/slatemint",
+    "docs": "https://rumblingb.github.io/slatemint"
+  },
+  "tags": ["markdown", "html", "json", "normalization", "text"]
+}
